@@ -456,76 +456,7 @@ def play_game(word_list):
             print("Total score over all hands:", game_score)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    """
-    round = 1
-    hand = deal_hand(HAND_SIZE)
-    print("Current Hand: ", end="")
-    display_hand(hand)
-    while round <= rounds:
-        if round > 1:
-            hand = deal_hand(HAND_SIZE)
-        elif replays > 0:
-            substitution = input("Would you like to substitute a letter?").lower()
-            if substitution == "yes":
-                letter = input("Which letter would you like to replace:")
-                substitute_hand(hand, letter)
-                round_score = play_hand(hand, word_list)
-                replay = input("Would you like to replay the hand?")
-                replay = str.lower(replay)
-                if replay in " no ":
-                    game_score += round_score
-                    round += 1
-                elif replay in " yes ":
-                    replay_score = play_hand(hand, word_list)
-                    round_score = max(round_score, replay_score)
-                    replays -= 1
-                    game_score += round_score
-
-            elif substitution == "no":
-                round_score = play_hand(hand, word_list)
-                replay = input("Would you like to replay the hand?")
-                replay = str.lower(replay)
-                if replay in " no ":
-                    game_score += round_score
-                    round += 1
-                if replay in " yes ":
-                    replay_score = play_hand(hand, word_list)
-                    round_score = max(round_score, replay_score)
-                    replays -= 1
-                    game_score += round_score
-        else:
-            game_score += play_hand(hand, word_list)
-            round += 1
-        print("-"*8)
-    print("Total score over all hands:", game_score)
-    """
-
-
-            
-
     
-
-
 #
 # Build data structures used for entire session and play game
 # Do not remove the "if __name__ == '__main__':" line - this code is executed
